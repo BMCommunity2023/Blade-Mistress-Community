@@ -46,9 +46,9 @@ CBMLauncherDlg::CBMLauncherDlg(CWnd* pParent /*=NULL*/)
 	m_hasUpdated = false;
 
 	strcpy_s(_updateServers[kServerType_Default].pszServerName, UpdateServer::iServerNameSize, "Normal");
-	strcpy_s(_updateServers[kServerType_Default].pszServerURL, UpdateServer::iServerUrlSize, "https://blademistresscommunity.github.io/Normal/"); // need download url for their client fiels unzipped here
+	strcpy_s(_updateServers[kServerType_Default].pszServerURL, UpdateServer::iServerUrlSize, "https://BMCommunity2023.github.io/Normal/"); // need download url for their client fiels unzipped here
 	strcpy_s(_updateServers[kServerType_DefaultFancy].pszServerName, UpdateServer::iServerNameSize, "NormalFancy");
-	strcpy_s(_updateServers[kServerType_DefaultFancy].pszServerURL, UpdateServer::iServerUrlSize, "https://blademistresscommunity.github.io/NormalFancy/");
+	strcpy_s(_updateServers[kServerType_DefaultFancy].pszServerURL, UpdateServer::iServerUrlSize, "https://BMCommunity2023.github.io/NormalFancy/");
 }
 
 void CBMLauncherDlg::DoDataExchange(CDataExchange* pDX)
