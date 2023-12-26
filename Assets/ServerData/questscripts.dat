@@ -1,231 +1,433 @@
-// ********************** questscripts.dat ************************
-
-// the repository for the definition of all multi-part quests in blade mistress
-// notice that the // at the front of a line denotes a comment, and that empty
-// lines are allowed.
-
-
-// The DESC keyword adds a string of text to the quest verb above it, that shows up in the
-// player's text window when that quest verb becomes active.  This text can be LONG, as
-// much as 1000 bytes.
-
-// witches contain adventures.  adventures contain quests.
-
-
-
-
-// Note: witch names can be no longer than 60 bytes, and CAN contain spaces
-// ********************** WITCH **************************
-WITCH 207 152 Gertrude
-STATEMENT I am Gertrude. My sisters will be coming soon. You think you are ready for some adventure?  Let's just see how ready...
-READY	 // this tag, on its own line, means normal players can use this witch
-
-// QUEST 1
+WITCH 207 152 Fingle Witch
+STATEMENT  Help me and my other four sisters. 38N 38E | 245N 19E | 250N 237E | 207N 158E
+READY
 ADVENTURE
-KILL MONSTER_TYPE 2 2
-DESC Let us see how brave of a warrior you are. Go kill some monsters in order.  First, a Tawny Minotaur.
-KILL MONSTER_TYPE 7 0
-DESC Next, kill me a Green Dragon.
-KILL MONSTER_TYPE 3 0
-DESC Finally, kill me a Sabertooth.
-GOTO LOCATION 207 152
-DESC Now come back and talk to me.
-REWARD GOLD 100
-DESC Here is some gold.  I have more quests for you when you are ready, young slayer.
-
-// QUEST 2
-ADVENTURE
-GOTO LOCATION 210 141
-DESC Go visit 210 141
-GOTO LOCATION 203 148
-DESC Now go look around 203 148
-KILL MONSTER_TYPE 2 3
-DESC Go kill me a Jade Mino!
-GOTO LOCATION 207 152
-DESC Now come back and talk to me.
-REWARD GOLD 100
-DESC Have some things!
-
-
-// QUEST 3
-ADVENTURE
-VISIT PLAYERTYPE FIGHTER
-DESC Go visit a fighter!
-VISIT PLAYERTYPE YOUNG
-DESC Go visit a new player!
-VISIT PLAYERTYPE MAGE
-DESC Go find yourself a mage!
-GOTO LOCATION 207 152
-DESC Now come back and talk to me.
-REWARD EGG 1 1
-DESC Not too bad a prize for walking around, huh?
-
-// QUEST 4
-ADVENTURE
-VISIT PLAYERTYPE BALANCED
-DESC Go visit a balanced player, such as Punisher.
-GIVEGOLD PLAYERTYPE POOR 100
-DESC Go give some gold to a poor player in the game.  Share the wealth!
-GIVEGOLD PlAYERTYPE MAGE 100
-DESC Now give some gold to a mage.  Mages need to eat too!
-GOTO LOCATION 207 152
-DESC Come back to me for your reward.
-REWARD EGG 2 2
-DESC Well done.  Your next quest will be a challenge!
-
-// QUEST 5
-ADVENTURE
-KILL MONSTER_TYPE 10 0
-DESC Go slaughter a Spirit Golem for me.
-KILL MONSTER_TYPE 11 0
-DESC Go kill a Spirit Minotaur for me.
-KILL MONSTER_TYPE 12 0
-DESC Go kill a 2 Spirit Tigers for me.
-KILL MONSTER_TYPE 12 0
-DESC I need one more Spirit Tiger sacrifice!
-GOTO LOCATION 207 152
-DESC Come back to me for your reward.
+GOTO LOCATION 40 145
+DESC Visit the Great Tree of the Eagle at place 40N 145E.
+GOTO LOCATION 222 76
+DESC Visit the Great Tree of the Bear at place 222N 76E.
+GOTO LOCATION 220 124
+DESC Visit the Great Tree of the Turtle at place 220N 124E.
+GOTO LOCATION 219 177
+DESC Visit the Great Tree of the Moon at place 219N 177E.
+GOTO LOCATION 126 211
+DESC Visit the Great Tree of the Frog at place 126N 211E.
+GOTO LOCATION 166 40
+DESC Visit the Great Tree of the Wolf at place 166N 40E.
+GOTO LOCATION 174 206
+DESC Visit the Great Tree of the Sun at place 174N 206E.
+GOTO LOCATION 69 223
+DESC Visit the Great Tree of the Snake at place 69N 223E.
+GOTO LOCATION 11 6
+DESC Visit the Great Tree of the Evil at place 11N 6E.
+REWARD STAFF 0
+REWARD STAFF 1
+REWARD STAFF 2
 REWARD STAFF 3
-REWARD EGG 2 3
-REWARD FAVOR 1
-DESC Well done!  I will have more quests for you yet!
-
-// QUEST 6
-ADVENTURE
-GOTO LOCATION 29 31
-DESC Go visit the crater of the Volcano, if you dare!!!
-KILL MONSTER_TYPE 25 0
-DESC Kill a zombie for me!
-KILL MONSTER_TYPE 25 1
-DESC Kill a Ghoul for me!
-GOTO LOCATION 207 152
-DESC Come back to me quickly!
 REWARD STAFF 3
-REWARD DUST 1
-DESC I still have more for you, great warrior!
-
-
-// Witch Number 2
-WITCH 38 38 Grizleda
-STATEMENT I am Grizelda.  I hope you are ready for a challenge, for my tasks can only be complated by the strongest warriors.
-READY	 // this tag, on its own line, means normal players can use this witch
-
-// QUEST 1
+REWARD STAFF 3
+REWARD STAFF 4
+REWARD STAFF 4
+REWARD STAFF 4
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+REWARD STAFF 5
+DESC My quest is over now. You hold a nice stack of Staffs, use them wise.
+END
+WITCH 245 19 Gentanos Witch
+STATEMENT Have you visited my other three sisters? 38N 38E | 250N 237E | 207N 152E | 207N 158E
+READY
 ADVENTURE
-GOTO LOCATION 128 128
-DESC Travel to the middle of the main land.
-KILL MONSTER_TYPE 7 5
-DESC Go kill a dragon illusion, now that you have walked so far away. I enjoy playing games.
-GOTO LOCATION 128 128
-DESC Now go back to the middle one last time. I do enjoy this.
-REWARD GOLD 1000
-REWARD EGG 2 2
-DESC I'll give you some gold. If you want more, come talk to me.
-
-// Quest 2
-ADVENTURE
-KILL MONSTER_TYPE 25 3
-DESC Kill me 5 Ash Vampires.  Quickly now!
-KILL MONSTER_TYPE 25 3
-DESC 4 More!
-KILL MONSTER_TYPE 25 3
-DESC Only 3 left.
-KILL MONSTER_TYPE 25 3
-DESC Two more.  Don't give up on an old lady now!
-KILL MONSTER_TYPE 25 3
-DESC Last one!
-GIVEGOLD PLAYERTYPE POOR 200
-DESC Now, share your wealth and you will gain some for your generosity.
-REWARD GOLD 3000
-DESC Return to me for a great yet rewarding challenge, when you are ready!
-
-// QUEST 3
-ADVENTURE
+KILL QUEST_MONSTER 13 0 240 30 295 Left Hand Of Azrael
+DESC You are here for Azrael ingot? Go for the Left Hand of Azrael at 240N 30E.
+KILL QUEST_MONSTER 13 0 166 210 295 Right Hand Of Azrael
+DESC Now for the Right Hand of Azrael at 166N 210E near Jereston.
+KILL QUEST_MONSTER 4 0 164 186 320 Heart of Azrael
+DESC Next is the Heart of Azrael at 164N 186E.
+KILL QUEST_MONSTER 4 0 158 43 320 Mind of Azrael
+DESC Next is the Mind of Azrael at 158N 43E near Magarnas.
+KILL QUEST_MONSTER 28 3 126 178 345 Will of Azrael
+DESC Next is the Will of Azrael at 126N 178E near Mostool.
+KILL QUEST_MONSTER 25 3 28 29 345 Might of Azrael
+DESC Next is the Might of Azrael at 28N 29E near Wasteland.
 KILL MONSTER_TYPE 25 4
-DESC I have no use for weak players anymore.  Show me what you can do. Kill me 10 Pit Vampires.
+DESC Kill me three Pit Vampires.
 KILL MONSTER_TYPE 25 4
-DESC 9 left!
+DESC Two more...
 KILL MONSTER_TYPE 25 4
-DESC 8 left!
-KILL MONSTER_TYPE 25 4
-DESC 7 left!
-KILL MONSTER_TYPE 25 4
-DESC 6 left!
-KILL MONSTER_TYPE 25 4
-DESC 5 left!
-KILL MONSTER_TYPE 25 4
-DESC 4 left!
-KILL MONSTER_TYPE 25 4
-DESC 3 left!
-KILL MONSTER_TYPE 25 4
-DESC 2 left!
-KILL MONSTER_TYPE 25 4
-DESC Last one!
-GOTO LOCATION 38 38
-DESC Come to me for your reward, warrior.  You have proven yourself to me!
+DESC One more...
+KILL MONSTER_TYPE 26 3
+DESC Let's pay the Bat's lair a visit, kill two Moon Bats.
+KILL MONSTER_TYPE 26 3
+DESC Another one please...
+KILL MONSTER_TYPE 26 4
+DESC Now for a bloody Silver Bat.
+KILL MONSTER_TYPE 7 4
+DESC I'm in bloodrage, slay the mighty Dragon Overlord too.
+GOTO LOCATION 245 19
+DESC Come back to me for final instructions.
+KILL QUEST_MONSTER 1 5 12 238 380 Azrael, Angel of Death
+DESC This is it, defeat the evil master to obtain the sacred Azrael Ingot. Find him at 12N 238E near Omion.
+GOTO LOCATION 245 19
+DESC The magical power from Azrael's corpse was drained into this special ingot. Well done proud warrior, come back to me and get your reward.
+REWARD INGOT 14 120000 50 250 100 Azrael Ingot
 REWARD DUST 1
-REWARD DUST 1
-REWARD DUST 3
 REWARD DUST 3
 REWARD DUST 4
-REWARD GOLD 2000
-DESC I have heard people like you enjoy these dusts.  There are plenty more, if you are up for the challenge.
-
-
-
-// the VISIT quest means go up and talk to.
-// the PLAYERTYPE keyword is followed by one of these keywords:
-// FIGHTER, MAGE, CRAFTER, BALANCED, YOUNG, or POOR.
-// VISIT PLAYERTYPE FIGHTER
-
-// the GIVEGOLD quest means go up and give gold to.  The amount is always the LAST
-// argument on the line.
-// the PLAYERTYPE keyword is followed by one of these keywords:
-// FIGHTER, MAGE, CRAFTER, BALANCED, YOUNG, or POOR.
-// GIVEGOLD PLAYERTYPE CRAFTER 20
-
-// The STAFF keyword is followed by the staff quality, from 0 to 4.
-// REWARD STAFF 1
-
-// The TOTEM keyword is followed by the totem quality, from 0 to 21.
-// REWARD TOTEM 1
-
-// The DUST keyword is followed by the dust type, as a number from 0 to 4.
-// GREEN_DUST = 0
-// BLUE_DUST  = 1
-// BLACK_DUST = 2
-// WHITE_DUST = 3
-// RED_DUST   = 4
-// REWARD DUST 4
-
-// the INGOT keyword is followed by several arguments:
-// the power, the value in gold, the three RGB values, and the name comes last.
-// REWARD INGOT 10 80000 0 128 128 Chitin Ingot
-// REWARD INGOT 9 75000 0 50 128 Elatium Ingot
-// REWARD INGOT 8 50000 128 0 0 Vizorium Ingot
-
-// the FAVOR keyword is followed by the number of the Great Spirti it corresponds to:
-// BEAR    = 0
-// WOLF    = 1
-// EAGLE   = 2
-// SNAKE   = 3
-// FROG    = 4
-// SUN     = 5
-// MOON    = 6
-// TURTLE  = 7
-// REWARD FAVOR 6
-
-// the EGG keyword is followed by the dragon type number (0-6), then the quality number (0-3)
-// RED    = 0
-// GREEN  = 1
-// BLUE   = 2
-// WHITE  = 3
-// BLACK  = 4
-// GOLD   = 5
-// WONDER = 6
-// REWARD EGG 6 0
-
-// make sure this tag stays at the end of the file, so the parser has an easy way
-// of finding out when to stop.
+END
+WITCH 207 158 Fingle Witchy
+STATEMENT Have you seen My other three sisters yet? 38N 38E | 245N 19E | 250N 237E | 207N 152E
+READY
+ADVENTURE
+KILL MONSTER_TYPE 22 0
+DESC First task kill an Orc.
+KILL MONSTER_TYPE 22 1
+DESC Next kill an Orc Bully.
+KILL MONSTER_TYPE 22 2
+DESC Next kill an Orc Warrior.
+KILL MONSTER_TYPE 22 3
+DESC Next kill an Orc Fanatic.
+KILL MONSTER_TYPE 22 4
+DESC Next kill an Orc Champion.
+KILL MONSTER_TYPE 23 0
+DESC Next kill a Wurm.
+KILL MONSTER_TYPE 23 1
+DESC Next kill a Zerad Wurm.
+KILL MONSTER_TYPE 7 1
+DESC Next kill a Dragon Queen.
+KILL MONSTER_TYPE 7 2
+DESC Next kill a Guardian Dragon.
+GOTO LOCATION 207 158
+DESC Come back to me, your quest continues.
+REWARD DUST 0
+REWARD DUST 0
+REWARD DUST 2
+REWARD DUST 2
+ADVENTURE
+KILL MONSTER_TYPE 18 0
+DESC First task kill a Shade.
+KILL MONSTER_TYPE 18 1
+DESC Next kill a Haunt.
+KILL MONSTER_TYPE 18 2
+DESC Now kill a Wraith.
+KILL MONSTER_TYPE 18 3
+DESC Then kill a Wraith Mistress.
+KILL MONSTER_TYPE 19 0
+DESC Time to kill a Bone Warrior.
+KILL MONSTER_TYPE 19 3
+DESC I mean a Bone Lord.
+KILL MONSTER_TYPE 19 4
+DESC Actually, a Bone Tyrant.
+KILL MONSTER_TYPE 19 5
+DESC Or was that a Bone Imperator?
+GOTO LOCATION 207 158
+DESC Come back to me, I am not finished.
+REWARD GOLD 50000
+ADVENTURE
+KILL MONSTER_TYPE 26 0
+DESC kill a Bat.
+KILL MONSTER_TYPE 26 1
+DESC kill a Violent Bat.
+KILL MONSTER_TYPE 26 2
+DESC kill a Stingtail Bat.
+KILL MONSTER_TYPE 26 3
+DESC kill a Moon Bat.
+KILL MONSTER_TYPE 26 4
+DESC kill a Silver Bat.
+GOTO LOCATION 207 158
+DESC Come back to me. I am not finished.
+REWARD GOLD 100000
+ADVENTURE
+KILL QUEST_MONSTER 4 0 66 6 800 Reaper
+DESC Now for the last part of my quest. It seems the Demon King has recruited some of the world's deadliest hunters into the realm. They are a vile pair, they MUST be stopped!! Go to Wasteland and kill at place 66N 6E.
+KILL QUEST_MONSTER 8 1 6 66 800 Abbadon
+DESC There is a demon at 6N 66E, seeking revenge for Reaper's death. 
+GOTO LOCATION 207 158
+DESC Come back to me, and get your well earned reward.
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+REWARD TOTEM 23
+END
+WITCH 250 237 silver witch
+STATEMENT I give dusts for lizard killing the lower labs are plagued with them.
+READY
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Go kill me some 70 lizard men
+KILL MONSTER_TYPE 28 2
+DESC that is 1. More to kill
+KILL MONSTER_TYPE 28 2
+DESC that is 2. More please
+KILL MONSTER_TYPE 28 2
+DESC that is 3. Need more then that
+KILL MONSTER_TYPE 28 2
+DESC That is 4. You want me to keep you informed on how many you kill?
+kILL MONSTER_TYPE 28 2
+DESC Tuff you get it ANYWAYS. 5
+KILL MONSTER_TYPE 28 2
+DESC that's 6 I will just keep talking.
+GOTO LOCATION 250 237
+DESC That's 7. Return to me for a break
+REWARD DUST 0
+REWARD DUST 0
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Ok you ready for more killing.
+KILL MONSTER_TYPE 28 2
+DESC ok that's 8 did you think of lizard geo's yet?
+KILL MONSTER_TYPE 28 2
+DESC ok 9 so how many beads will you use?
+KILL MONSTER_TYPE 28 2
+DESC 10 Are you doing this for your first time? Or Did you return for more?
+KILL MONSTER_TYPE 28 2
+DESC 11 Just try to return through that portal!
+KILL MONSTER_TYPE 28 2
+DESC Isn't this fun? 12
+KILL MONSTER_TYPE 28 2
+DESC Unlucky 13. You better kill or I will put a curse on you.
+GOTO LOCATION 250 237
+DESC Whew! I thought I would have to place that curse on you. 14 return to me
+REWARD DUST 1
+REWARD DUST 1
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Back IN You go! .
+KILL MONSTER_TYPE 28 2
+DESC 15 Back when this was first was written you had to do 70 for 1 dust, KIDS THESE DAYS!
+KILL MONSTER_TYPE 28 2
+DESC 16 Did you think of shortcuts geos yet?
+KILL MONSTER_TYPE 28 2
+DESC 17 That might be faster then finding 36 36
+KILL MONSTER_TYPE 28 2
+DESC 18 Those are crafted using 2 differnt meat in order spideren and lizard for lab 2.
+KILL MONSTER_TYPE 28 2
+DESC 19 Lizard and rabbit for lab 3.
+KILL MONSTER_TYPE 28 2
+DESC 20 Did you say you rather be doing skiller geos. Then this lame quest?
+GOTO LOCATION 250 237
+DESC 21 Break time come back to me
+REWARD DUST 2
+REWARD DUST 2
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC More down there to kill
+KILL MONSTER_TYPE 28 2
+DESC 22 I guess you decided that silver is more important than leveling.
+KILL MONSTER_TYPE 28 2
+DESC 23 Are you locating the right lizards?
+KILL MONSTER_TYPE 28 2
+DESC 24 Have you mistaken a small lizard man for a lizard man yet?
+KILL MONSTER_TYPE 28 2
+DESC 25 Or a lizard warrior for a lizard man?
+KILL MONSTER_TYPE 28 2
+DESC 26 Sure would be nice if you could recolor like all the other monsters.
+KILL MONSTER_TYPE 28 2
+DESC 27 Tuff they share the same skin.
+GOTO LOCATION 250 237
+DESC 28 break time come back to me
+REWARD DUST 3
+REWARD DUST 3
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC How many more trips in? You tell me!
+KILL MONSTER_TYPE 28 2
+DESC 29 Are you getting any extra dusts while killing?
+KILL MONSTER_TYPE 28 2
+DESC 30 There is lab 3 which has them as well.
+KILL MONSTER_TYPE 28 2
+DESC 31 Are you actually cheesing this by running 22mm geo's?
+KILL MONSTER_TYPE 28 2
+DESC 32. Did you remember to bring food for this journey?
+KILL MONSTER_TYPE 28 2
+DESC 33 Blue valkyrie need's food badly.
+KILL MONSTER_TYPE 28 2
+DESC 34  Oh wait you don't eat food.
+GOTO LOCATION 250 237
+DESC 35 Your getting close i think your 1/2 done. I might be wrong.
+REWARD DUST 4
+REWARD DUST 4
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC In you go again! I know isn't finding 36 36 in upper lab fun?
+KILL MONSTER_TYPE 28 2
+DESC 36 Did I see you log out in between quests?
+KILL MONSTER_TYPE 28 2
+DESC 37 If so I might have to punish you. Just don't do it again.
+KILL MONSTER_TYPE 28 2
+DESC 38 Do you think i am trolling you?
+KILL MONSTER_TYPE 28 2
+DESC 39 Yes love making you kill them.
+KILL MONSTER_TYPE 28 2
+DESC 40 Get on this or it will take you more then a day to complete.
+KILL MONSTER_TYPE 28 2
+DESC 41 Did you bring bombs?
+GOTO LOCATION 250 237
+DESC 42 return to me
+REWARD Dust 14
+REWARD Dust 14
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Back in you go! I know all this for silvers.
+KILL MONSTER_TYPE 28 2
+DESC 43 Are you still with me?
+KILL MONSTER_TYPE 28 2
+DESC 44 Do you wish to kill yourself by now, instead of the lizards?
+KILL MONSTER_TYPE 28 2
+DESC 45 Do you wish that all lizards count ?
+KILL MONSTER_TYPE 28 2
+DESC 46 Tuff the game is not coded like that.
+KILL MONSTER_TYPE 28 2
+DESC 47 How About asking for a lizard summoning item?
+KILL MONSTER_TYPE 28 2
+DESC 48 tuff no such thing in game.
+GOTO LOCATION 250 237
+DESC 49 come back to me
+REWARD GOLD 10000
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Yes you must go back in for your dusts.
+KILL MONSTER_TYPE 28 2
+DESC 50 it seems there mutiplying as you turn in.
+KILL MONSTER_TYPE 28 2
+DESC 51 You didn't fix your dust, your a bad owner.
+KILL MONSTER_TYPE 28 2
+DESC 52 What day are you on now?
+KILL MONSTER_TYPE 28 2
+DESC 53 The game developers added speed.
+KILL MONSTER_TYPE 28 2
+DESC 54 Maybe it won't take as long to compleate now.
+KILL MONSTER_TYPE 28 2
+DESC 55 Did you know there more lizards in deeper geo's?
+GOTO LOCATION 250 237
+DESC 56 Return to me
+REWARD GOLD 10000
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC You Think I am having fun Telling you to get your lazy Butt in there?
+KILL MONSTER_TYPE 28 2
+DESC 57 Good luck trying to get the heart gem out of that chest.
+KILL MONSTER_TYPE 28 2
+DESC 58 Yes i know that the answers are all random.
+KILL MONSTER_TYPE 28 2
+DESC 59 I blame the scripter which had to add new comments.
+KILL MONSTER_TYPE 28 2
+DESC 60 What anoying new thing will i say to you.
+KILL MONSTER_TYPE 28 2
+DESC 61 Stay in the quest and find out.
+KILL MONSTER_TYPE 28 2
+DESC 62 With this many dusts on the line.
+GOTO LOCATION 250 237
+DESC 63 Come back to me
+Reward GOLD 10000
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+ADVENTURE
+KILL MONSTER_TYPE 28 2
+DESC Your Right I am having a ball watching you get frustrated with me.
+KILL MONSTER_TYPE 28 2
+DESC 64 Are you having double vision of lizards yet?
+KILL MONSTER_TYPE 28 2
+DESC 65 How much are you spending to run geo's instead?
+KILL MONSTER_TYPE 28 2
+DESC 66 let see.
+KILL MONSTER_TYPE 28 2
+DESC 67 1,000 a pop for a 22m.
+KILL MONSTER_TYPE 28 2
+DESC 68 THAT'S 70000 if your unlucky
+KILL MONSTER_TYPE 28 2
+DESC 69 Is that even worth 55 Silver dusts?
+GOTO LOCATION 250 237
+DESC 70 DONE! Come back and get your dust now.
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+REWARD DUST 15
+DESC Here ya go. Shiny new Silver Dusts.  You want to do it all again?
+END
+WITCH 253 253 Admin Witch
+STATEMENT This is for Admins only
+ADVENTURE
+KILL QUEST_MONSTER 8 1 253 254 350 Admin Pet
+REWARD DUST 0
+REWARD DUST 1
+REWARD DUST 2
+REWARD DUST 3
+REWARD DUST 4
+REWARD DUST 5
+REWARD DUST 6
+REWARD DUST 7
+REWARD DUST 8
+REWARD DUST 9
+REWARD DUST 10
+REWARD DUST 11
+REWARD DUST 12
+REWARD DUST 13
+REWARD DUST 14
+REWARD DUST 15
+REWARD INGOT 10 80000 0 128 128 Chitin Ingot
+REWARD INGOT 11 90000 0 128 48 Malignant Ingot
+REWARD INGOT 15 1428572 128 250 0 Chrome Ingot
+REWARD INGOT 14 1000000 50 250 100 Azrael Ingot
+REWARD STAFF 5
+REWARD TOTEM 23
+END
 ENDOFFILE
-
