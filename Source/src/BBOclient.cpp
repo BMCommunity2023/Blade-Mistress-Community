@@ -2540,10 +2540,17 @@ void BBOClient::Draw(void)
 	{
 		CD3DFont *pf = puma->GetDXFont(0);
 		char tempText[128];
-		sprintf(tempText,"FPS %d", 1000 / (thisTime - lastTime1));
-		RECT rect = {puma->ScreenW() - 180,puma->ScreenH()-12,puma->ScreenW()-130,puma->ScreenH()};
-		pf->DrawText(rect,NULL,0xffffffff,tempText);
-
+		if (thisTime != lastTime1)
+		{
+			sprintf(tempText, "FPS %d", 1000 / (thisTime - lastTime1));
+		}
+		else
+		{
+			// If thisTime - lastTime1 is zero
+			sprintf(tempText, "FPS Inf"); // Display "FPS Inf" if calculation is too fast; Thanks modern PCs
+		}
+		RECT rect = { puma->ScreenW() - 180, puma->ScreenH() - 12, puma->ScreenW() - 130, puma->ScreenH() };
+		pf->DrawText(rect, NULL, 0xffffffff, tempText);
 	}
 	lastTime1 = thisTime;
 
